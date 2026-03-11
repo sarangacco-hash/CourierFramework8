@@ -18,6 +18,11 @@ string[] firstLine = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmpt
 int packageCount = 0;
 
 int baseCost = 0;
+
+//no inputs provided, exit the program
+if (firstLine.Length < 2)
+    return;
+
 int.TryParse(firstLine[0], out baseCost);
 int.TryParse(firstLine[1], out packageCount);
 
@@ -49,14 +54,21 @@ for (int i = 0; i < packageCount; i++)
 
     var basePrice = priceCalculatorService.Calculate(baseCost, distance, weight);
 
-    var discountApplicable = discountService.ApplyDiscount(line[3], basePrice, distance, weight);
+    var discountApplicable = 0m;
+    var discountCode = string.Empty;
+    //if there is no discount code provided, then skip the discount calculation and move to next line
+    if (line.Length > 3)
+    {
+        discountCode = line[3].ToUpper();
+        discountApplicable = discountService.ApplyDiscount(discountCode, basePrice, distance, weight);
+    }
 
     var package = new Package
     {
         PackageId = line[0],
         Weight = weight,
         Distance = distance,
-        OfferCode = line[3],
+        OfferCode = discountCode,
         FinalPrice = basePrice - discountApplicable,
         DiscountAmount = discountApplicable
     };
@@ -66,7 +78,8 @@ for (int i = 0; i < packageCount; i++)
 
 foreach (var package in packages)
 {
-    Console.WriteLine($"{package.PackageId} {((int)package.DiscountAmount)} {(int)package.FinalPrice}");
+    Console.WriteLine($"{package.PackageId} {(int)package.DiscountAmount} {(int)package.FinalPrice}");
 }
+
 
 Console.ReadLine();

@@ -1,11 +1,4 @@
-﻿using CourierService.Contracts;
-using CourierService.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CourierService.Utilities;
 
 namespace CourierService.Services
 {
