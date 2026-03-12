@@ -17,5 +17,28 @@ Delivery Cost Estimate Problem 1
    Then, register the new discount rule in the ConfigureServices method of the Program.cs file.
 
 
+=======================To run the application=======================
+1. Clone the repository to your local machine.
+
+2. Open the terminal and navigate to the project directory, then execute: dotnet run
+You might get some warnings, but the program should run successfully and you can input the parameters as defined in the problem statement.
+ or
+
+3. Run the project in Visual Studio 2022 by pressing F5 or clicking the "Start" button.
+
+====================================================================
+
+
+
+
+=======================Sample Input=======================
+Enter the parameters as defined in the problem
+100 3
+PKG1 5 5 OFR001
+PKG2 15 5 OFR002
+PKG3 10 100 OFR003
+==========================================================
+
+
 
 
