@@ -32,11 +32,18 @@ You might get some warnings, but the program should run successfully and you can
 
 
 =======================Sample Input=======================
-Enter the parameters as defined in the problem
+
+Enter the parameters as defined in the problem (without the blank space between the lines)
+
+
 100 3
+
 PKG1 5 5 OFR001
+
 PKG2 15 5 OFR002
+
 PKG3 10 100 OFR003
+
 
 
 
