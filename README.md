@@ -26,7 +26,7 @@ You might get some warnings, but the program should run successfully and you can
 
 3. Run the project in Visual Studio 2022 by pressing F5 or clicking the "Start" button.
 
-====================================================================
+
 
 
 
@@ -37,7 +37,7 @@ Enter the parameters as defined in the problem
 PKG1 5 5 OFR001
 PKG2 15 5 OFR002
 PKG3 10 100 OFR003
-==========================================================
+
 
 
 

@@ -81,5 +81,5 @@ foreach (var package in packages)
     Console.WriteLine($"{package.PackageId} {(int)package.DiscountAmount} {(int)package.FinalPrice}");
 }
 
-
-Console.ReadLine();
+//Keep for testing
+//Console.ReadLine();
